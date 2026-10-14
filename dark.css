@@ -1,0 +1,29 @@
+/* dynamic palette; dark theme */
+:root {
+    /* colours */
+    --col-bg: #000;
+    --col-surface1: oklch(from var(--col-bg) clamp(0, calc(l + 0.02), 1) c h);
+    --col-surface1-hover: oklch(from var(--col-surface1) clamp(0, calc(l + 0.02), 1) c h);
+    --col-surface2: oklch(from var(--col-surface1) clamp(0, calc(l + 0.06), 1) c h);
+    --col-surface2-hover: oklch(from var(--col-surface2) clamp(0, calc(l + 0.02), 1) c h);
+    --col-surface3: oklch(from var(--col-surface2) clamp(0, calc(l + 0.06), 1) c h);
+    --col-surface3-hover: oklch(from var(--col-surface3) clamp(0, calc(l + 0.02), 1) c h);
+    --col-border: oklch(from var(--col-bg) clamp(0, calc(l + 0.22), 1) c h);
+    --col-border-soft: oklch(from var(--col-bg) clamp(0, calc(l + 0.18), 1) c h);
+    
+    --col-text: oklch(from var(--col-bg) 0.9 c h);
+    --col-text-muted: oklch(from var(--col-bg) 0.65 c h);
+    --col-text-faint: oklch(from var(--col-bg) 0.4 c h);
+
+    --col-accent-soft: oklch(from var(--col-accent) clamp(0, calc(l + 0.12), 1) c h);
+    --col-accent: oklch(from var(--col-bg) 0.7 clamp(0.12, c, 0.22) calc(h * 2 - 20));
+    --col-accent-deep: oklch(from var(--col-accent) clamp(0, calc(l - 0.12), 1) c h);
+
+    --col-success: #67c984;
+    --col-warning: #f0d16a;
+    --col-error: #d86753;
+    --col-info: #888edb;
+    --col-link: oklch(from var(--col-accent) l c calc(h + 20));
+
+    background-color: var(--col-bg);
+}
